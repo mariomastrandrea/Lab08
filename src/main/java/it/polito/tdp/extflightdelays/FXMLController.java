@@ -14,8 +14,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-public class FXMLController {
-
+public class FXMLController 
+{
+	@SuppressWarnings("unused")
 	private Model model;
 	
     @FXML // ResourceBundle that was given to the FXMLLoader
@@ -34,18 +35,21 @@ public class FXMLController {
     private Button btnAnalizza; // Value injected by FXMLLoader
 
     @FXML
-    void doAnalizzaAeroporti(ActionEvent event) {
+    void doAnalizzaAeroporti(ActionEvent event) 
+    {
     	//TODO
     }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
-    void initialize() {
+    void initialize() 
+    {
         assert txtResult != null : "fx:id=\"txtResult\" was not injected: check your FXML file 'Scene.fxml'.";
         assert distanzaMinima != null : "fx:id=\"distanzaMinima\" was not injected: check your FXML file 'Scene.fxml'.";
         assert btnAnalizza != null : "fx:id=\"btnAnalizza\" was not injected: check your FXML file 'Scene.fxml'.";
     }
     
-    public void setModel(Model model) {
+    public void setModel(Model model) 
+    {
     	this.model = model;
     }
 }

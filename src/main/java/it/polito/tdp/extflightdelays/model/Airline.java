@@ -1,43 +1,37 @@
 package it.polito.tdp.extflightdelays.model;
 
-public class Airline {
-
+public class Airline 
+{
 	private int id;
 	private String iataCode;
 	private String airlineName;
 	
-	public Airline(int id, String iataCode, String airlineName) {
+	
+	public Airline(int id, String iataCode, String airlineName) 
+	{
 		this.id = id;
 		this.iataCode = iataCode;
 		this.airlineName = airlineName;
 	}
 
-	public int getId() {
-		return id;
+	public int getId() 
+	{
+		return this.id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public String getIataCode() 
+	{
+		return this.iataCode;
 	}
 
-	public String getIataCode() {
-		return iataCode;
-	}
-
-	public void setIataCode(String iataCode) {
-		this.iataCode = iataCode;
-	}
-
-	public String getAirlineName() {
-		return airlineName;
-	}
-
-	public void setAirlineName(String airlineName) {
-		this.airlineName = airlineName;
+	public String getAirlineName() 
+	{
+		return this.airlineName;
 	}
 
 	@Override
-	public int hashCode() {
+	public int hashCode() 
+	{
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + id;
@@ -45,7 +39,8 @@ public class Airline {
 	}
 
 	@Override
-	public boolean equals(Object obj) {
+	public boolean equals(Object obj) 
+	{
 		if (this == obj)
 			return true;
 		if (obj == null)
@@ -59,7 +54,8 @@ public class Airline {
 	}
 
 	@Override
-	public String toString() {
+	public String toString() 
+	{
 		return "Airline [id=" + id + ", iataCode=" + iataCode + ", airlineName=" + airlineName + "]";
 	}
 }

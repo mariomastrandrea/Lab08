@@ -2,16 +2,18 @@ package it.polito.tdp.extflightdelays.db;
 
 import java.sql.Connection;
 
-public class TestConnection {
-
-	public static void main(String[] args) {
-		
-		try {
+public class TestConnection 
+{
+	public static void main(String[] args) 
+	{	
+		try 
+		{
 			Connection connection = ConnectDB.getConnection();
 			connection.close();
 			System.out.println("Test PASSED");
-
-		} catch (Exception e) {
+		} 
+		catch (Exception e) 
+		{
 			System.err.println("Test FAILED");
 		}
 	}

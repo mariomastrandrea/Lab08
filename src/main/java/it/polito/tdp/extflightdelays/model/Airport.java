@@ -1,7 +1,7 @@
 package it.polito.tdp.extflightdelays.model;
 
-public class Airport {
-	
+public class Airport 
+{
 	private int id;
 	private String iataCode;
 	private String airportName;
@@ -12,8 +12,10 @@ public class Airport {
 	private Double longitude;
 	private Double timezoneOffset;
 	
+	
 	public Airport(int id, String iataCode, String airportName, String city, String state, String country,
-			Double latitude, Double longitude, Double timezoneOffset) {
+			Double latitude, Double longitude, Double timezoneOffset) 
+	{
 		this.id = id;
 		this.iataCode = iataCode;
 		this.airportName = airportName;
@@ -25,88 +27,63 @@ public class Airport {
 		this.timezoneOffset = timezoneOffset;
 	}
 
-	public int getId() {
-		return id;
+	public int getId() 
+	{
+		return this.id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public String getIataCode() 
+	{
+		return this.iataCode;
 	}
 
-	public String getIataCode() {
-		return iataCode;
+	public String getAirportName() 
+	{
+		return this.airportName;
 	}
 
-	public void setIataCode(String iataCode) {
-		this.iataCode = iataCode;
+	public String getCity() 
+	{
+		return this.city;
 	}
 
-	public String getAirportName() {
-		return airportName;
+	public String getState()
+	{
+		return this.state;
 	}
 
-	public void setAirportName(String airportName) {
-		this.airportName = airportName;
+	public String getCountry() 
+	{
+		return this.country;
 	}
 
-	public String getCity() {
-		return city;
+	public Double getLatitude() 
+	{
+		return this.latitude;
 	}
 
-	public void setCity(String city) {
-		this.city = city;
+	public Double getLongitude() 
+	{
+		return this.longitude;
 	}
 
-	public String getState() {
-		return state;
-	}
-
-	public void setState(String state) {
-		this.state = state;
-	}
-
-	public String getCountry() {
-		return country;
-	}
-
-	public void setCountry(String country) {
-		this.country = country;
-	}
-
-	public Double getLatitude() {
-		return latitude;
-	}
-
-	public void setLatitude(Double latitude) {
-		this.latitude = latitude;
-	}
-
-	public Double getLongitude() {
-		return longitude;
-	}
-
-	public void setLongitude(Double longitude) {
-		this.longitude = longitude;
-	}
-
-	public Double getTimezoneOffset() {
-		return timezoneOffset;
-	}
-
-	public void setTimezoneOffset(Double timezoneOffset) {
-		this.timezoneOffset = timezoneOffset;
+	public Double getTimezoneOffset() 
+	{
+		return this.timezoneOffset;
 	}
 
 	@Override
-	public int hashCode() {
+	public int hashCode() 
+	{
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + id;
+		result = prime * result + this.id;
 		return result;
 	}
 
 	@Override
-	public boolean equals(Object obj) {
+	public boolean equals(Object obj) 
+	{
 		if (this == obj)
 			return true;
 		if (obj == null)
@@ -114,14 +91,15 @@ public class Airport {
 		if (getClass() != obj.getClass())
 			return false;
 		Airport other = (Airport) obj;
-		if (id != other.id)
+		if (this.id != other.id)
 			return false;
 		return true;
 	}
 
 	@Override
-	public String toString() {
-		return "Airport [id=" + id + ", iataCode=" + iataCode + ", airportName=" + airportName + "]";
+	public String toString() 
+	{
+		return "Airport [id=" + this.id + ", iataCode=" + this.iataCode + ", airportName=" + this.airportName + "]";
 	}
 	
 }

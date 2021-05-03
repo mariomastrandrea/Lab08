@@ -2,8 +2,8 @@ package it.polito.tdp.extflightdelays.model;
 
 import java.time.LocalDateTime;
 
-public class Flight {
-
+public class Flight 
+{
 	private int id;
 	private int airlineId;
 	private int flightNumber;
@@ -17,9 +17,11 @@ public class Flight {
 	private LocalDateTime arrivalDate;
 	private Double arrivalDelay;
 
+	
 	public Flight(int id, int airlineId, int flightNumber, String tailNumber, int originAirportId,
 			int destinationAirportId, LocalDateTime scheduledDepartureDate, Double departureDelay, Double elapsedTime,
-			int distance, LocalDateTime arrivalDate, Double arrivalDelay) {
+			int distance, LocalDateTime arrivalDate, Double arrivalDelay) 
+	{
 		this.id = id;
 		this.airlineId = airlineId;
 		this.flightNumber = flightNumber;
@@ -34,112 +36,78 @@ public class Flight {
 		this.arrivalDelay = arrivalDelay;
 	}
 
-	public int getId() {
-		return id;
+	public int getId() 
+	{
+		return this.id;
+	}
+	
+	public int getAirlineId() 
+	{
+		return this.airlineId;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public int getFlightNumber() 
+	{
+		return this.flightNumber;
 	}
 
-	public int getAirlineId() {
-		return airlineId;
+	public String getTailNumber() 
+	{
+		return this.tailNumber;
 	}
 
-	public void setAirlineId(int airlineId) {
-		this.airlineId = airlineId;
+	public int getOriginAirportId() 
+	{
+		return this.originAirportId;
 	}
 
-	public int getFlightNumber() {
-		return flightNumber;
+	public int getDestinationAirportId() 
+	{
+		return this.destinationAirportId;
 	}
 
-	public void setFlightNumber(int flightNumber) {
-		this.flightNumber = flightNumber;
+	public LocalDateTime getScheduledDepartureDate() 
+	{
+		return this.scheduledDepartureDate;
+	}
+	
+	public Double getDepartureDelay() 
+	{
+		return this.departureDelay;
 	}
 
-	public String getTailNumber() {
-		return tailNumber;
+	public Double getElapsedTime()
+	{
+		return this.elapsedTime;
 	}
 
-	public void setTailNumber(String tailNumber) {
-		this.tailNumber = tailNumber;
+	public int getDistance() 
+	{
+		return this.distance;
 	}
 
-	public int getOriginAirportId() {
-		return originAirportId;
+	public LocalDateTime getArrivalDate() 
+	{
+		return this.arrivalDate;
 	}
 
-	public void setOriginAirportId(int originAirportId) {
-		this.originAirportId = originAirportId;
-	}
-
-	public int getDestinationAirportId() {
-		return destinationAirportId;
-	}
-
-	public void setDestinationAirportId(int destinationAirportId) {
-		this.destinationAirportId = destinationAirportId;
-	}
-
-	public LocalDateTime getScheduledDepartureDate() {
-		return scheduledDepartureDate;
-	}
-
-	public void setScheduledDepartureDate(LocalDateTime scheduledDepartureDate) {
-		this.scheduledDepartureDate = scheduledDepartureDate;
-	}
-
-	public Double getDepartureDelay() {
-		return departureDelay;
-	}
-
-	public void setDepartureDelay(Double departureDelay) {
-		this.departureDelay = departureDelay;
-	}
-
-	public Double getElapsedTime() {
-		return elapsedTime;
-	}
-
-	public void setElapsedTime(Double elapsedTime) {
-		this.elapsedTime = elapsedTime;
-	}
-
-	public int getDistance() {
-		return distance;
-	}
-
-	public void setDistance(int distance) {
-		this.distance = distance;
-	}
-
-	public LocalDateTime getArrivalDate() {
-		return arrivalDate;
-	}
-
-	public void setArrivalDate(LocalDateTime arrivalDate) {
-		this.arrivalDate = arrivalDate;
-	}
-
-	public Double getArrivalDelay() {
-		return arrivalDelay;
-	}
-
-	public void setArrivalDelay(Double arrivalDelay) {
-		this.arrivalDelay = arrivalDelay;
+	public Double getArrivalDelay() 
+	{
+		return this.arrivalDelay;
 	}
 
 	@Override
-	public int hashCode() {
+	public int hashCode() 
+	{
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + airlineId;
+		result = prime * result + this.airlineId;
 		return result;
 	}
 
 	@Override
-	public boolean equals(Object obj) {
+	public boolean equals(Object obj) 
+	{
 		if (this == obj)
 			return true;
 		if (obj == null)
@@ -147,15 +115,16 @@ public class Flight {
 		if (getClass() != obj.getClass())
 			return false;
 		Flight other = (Flight) obj;
-		if (airlineId != other.airlineId)
+		if (this.airlineId != other.airlineId)
 			return false;
 		return true;
 	}
 
 	@Override
-	public String toString() {
-		return "Flight [id=" + id + ", flightNumber=" + flightNumber + ", originAirportId=" + originAirportId
-				+ ", destinationAirportId=" + destinationAirportId + "]";
+	public String toString() 
+	{
+		return "Flight [id=" + this.id + ", flightNumber=" + this.flightNumber + ", originAirportId=" + this.originAirportId
+				+ ", destinationAirportId=" + this.destinationAirportId + "]";
 	}
 
 }
