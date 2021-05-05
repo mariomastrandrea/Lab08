@@ -1,7 +1,7 @@
 package it.polito.tdp.extflightdelays;
 
 import javafx.application.Application;
-import it.polito.tdp.extflightdelays.model.Model;
+import it.polito.tdp.extflightdelays.model.AirportsModel;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -16,7 +16,7 @@ public class EntryPoint extends Application
     	Parent root = loader.load();
         Scene scene = new Scene(root);
          
-        Model model = new Model();
+        AirportsModel model = new AirportsModel();
         FXMLController controller = loader.getController();
         controller.setModel(model);
         

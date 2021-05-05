@@ -38,5 +38,21 @@ public class ConnectDB
 			throw new RuntimeException(sqle);
 		}
 	}
+	
+	public static void close(AutoCloseable... resources) throws SQLException
+	{
+		for(var v : resources)
+		{
+			try
+			{
+				v.close();
+			}
+			catch(Exception e)
+			{
+				System.err.println("Errore chiusura risorse DB");
+				throw new SQLException(e);
+			}
+		}
+	}
 
 }
